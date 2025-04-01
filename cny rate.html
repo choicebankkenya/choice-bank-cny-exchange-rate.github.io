@@ -200,7 +200,7 @@
     </div>
 
     <script>
-        // 设置当前日期（更小的字体）
+        // 设置当前日期（小号字体）
         const now = new Date();
         
         // 英文日期格式：Tue, Apr 1, 2025
@@ -224,8 +224,8 @@
         
         // 自动生成最后更新时间（英文在前）
         const updateTime = new Date();
-        const updateEnglish = `Last Updated: ${updateTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}`;
-        const updateChinese = `最后更新时间: ${updateTime.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}`;
+        const updateEnglish = `Last Updated: ${updateTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}`;
+        const updateChinese = `最后更新时间: ${updateTime.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: true })}`;
         document.getElementById('last-updated').textContent = `${updateEnglish} / ${updateChinese}`;
     </script>
 </body>
